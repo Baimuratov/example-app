@@ -13,15 +13,12 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('songs', function (Blueprint $table) {
+        Schema::create('post_tag', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('author');
-            $table->string('singer');
-            $table->string('album')->nullable();
-            $table->string('genre')->nullable();
-            $table->unsignedBigInteger('duration');
-            $table->year('year');
+
+            $table->unsignedBigInteger('post_id');
+            $table->unsignedBigInteger('tag_id');
+
             $table->timestamps();
         });
     }
@@ -33,6 +30,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('songs');
+        Schema::dropIfExists('post_tag');
     }
 };
