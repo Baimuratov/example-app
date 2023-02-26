@@ -7,9 +7,11 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use App\Models\Category;
 use App\Models\Tag;
+use App\Models\Traits\Filterable;
 
 class Post extends Model
 {
+    use Filterable;
     use HasFactory;
     use SoftDeletes;
 
