@@ -24,9 +24,9 @@ class FilterRequest extends FormRequest
     public function rules()
     {
         return [
-            'title' => 'string',
-            'content' => 'string',
-            'image' => 'string',
+            'title' => '',
+            'content' => '',
+            'image' => '',
             'category_id' => '',
             'tags' => '',
         ];
