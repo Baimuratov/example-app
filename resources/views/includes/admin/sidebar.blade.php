@@ -4,7 +4,7 @@
                with font-awesome or any other icon font library -->
         <li class="nav-header">EXAMPLES</li>
         <li class="nav-item">
-            <a href="pages/calendar.html" class="nav-link">
+            <a href="{{ route('admin.posts.index') }}" class="nav-link">
                 <i class="nav-icon fas fa-solid fa-bars"></i>
                 <p>
                     Posts
