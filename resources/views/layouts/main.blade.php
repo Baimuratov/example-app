@@ -19,6 +19,11 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('posts.index') }}">Posts</a>
                     </li>
+                    @can('view', auth()->user())
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('admin.posts.index') }}">Admin</a>
+                    </li>
+                    @endcan
                 </ul>
             </div>
         </div>
