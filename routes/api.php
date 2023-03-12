@@ -30,7 +30,6 @@ Route::group([
     Route::post('logout', [AuthController::class, 'logout']);
     Route::post('refresh', [AuthController::class, 'refresh']);
     Route::post('me', [AuthController::class, 'me']);
-
 });
 
 Route::group([
@@ -38,5 +37,10 @@ Route::group([
     'middleware' => 'jwt.auth'
 ], function () {
     Route::get('/posts', 'IndexController');
+    Route::get('/posts/create', 'CreateController');
     Route::post('/posts', 'StoreController');
+    Route::get('/posts/{post}', 'ShowController');
+    Route::get('/posts/{post}/edit', 'EditController');
+    Route::patch('/posts/{post}', 'UpdateController');
+    Route::delete('/posts/{post}', 'DestroyController');
 });
